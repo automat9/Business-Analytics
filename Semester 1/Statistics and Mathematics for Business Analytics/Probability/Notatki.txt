@@ -1,0 +1,3 @@
+Joint probability: A AND B = P(A∩B) (or "likelihood of two events occurring together and at the same point in time")
+Dependent: P(A∩B)=P(A)×P(B∣A)
+Independent: P(A∩B)=P(A)×P(B)
