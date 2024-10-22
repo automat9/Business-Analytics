@@ -51,7 +51,7 @@ The value that occurs most frequently in a dataset.
 #c)	Discuss how the probabilities calculated in parts (a) and (b) would change if the sampling size were increased to 300 components. What implications does this have for quality control in the factory? 
 #d)	Implications for quality control 
  
-a <- B~(200,0.08) =============================================================================================================
+a <- B~(200,0.08) ===========================================================================================================
 b <- P(X=12) = 0.06532 =============================================================================================================
 c <- P(X ≤10) or P(X<11) = 0.06912 =============================================================================================================
 d <- Although the overall number of defects would increase as 8% of 300 is more than 8% of 200,
