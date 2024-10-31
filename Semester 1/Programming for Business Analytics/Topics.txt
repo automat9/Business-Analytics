@@ -1,0 +1,15 @@
+find words in a list 
+
+function that outputs a key metric for the business
+e.g. takes a and b and outputs a-b
+designing function that inputs abc and outputs x and y - tutorial 3
+
+Linear regression
+
+
+loops
+
+
+question on debugging - fixing a broken code
+
+20 mins on writing code and 30 min on writing comments 
