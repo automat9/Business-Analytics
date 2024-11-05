@@ -9,7 +9,6 @@ Linear regression
 
 loops
 
-
 question on debugging - fixing a broken code
 
 20 mins on writing code and 30 min on writing comments 
