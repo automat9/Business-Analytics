@@ -6,3 +6,11 @@ logistics team and management a centralised view of important metrics, including
 shipment volumes, carrier performance, on-time delivery rates, and customer demand trends.
 
 Aim: 
+To develop an interactive dashboard that visualises critical logistics metrics, 
+enabling the managing director to identify trends, inefficiencies, areas for improvement, and to make better informed decisions to.......... [ consult chatgpt]
+
+Objectives:
+Visualise Shipment Performance
+
+
+
