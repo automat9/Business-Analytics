@@ -1,0 +1,8 @@
+Scenario:
+A third-party logistics (3PL) company seeks to enhance operational efficiency and
+service quality by implementing a data-driven dashboard thatprovides key insights
+into shipping and warehouse activities. The dashboard is designed to give the
+logistics team and management a centralised view of important metrics, including
+shipment volumes, carrier performance, on-time delivery rates, and customer demand trends.
+
+Aim: 
