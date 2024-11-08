@@ -9,3 +9,9 @@ data = pd.read_csv(url)
 data.columns = data.columns.str.strip()
 
 data.head()
+
+# floats into whole numbers
+data('Units Sold') = data('Units Sold').astype(int)
+
+
+print(data.columns) # to check the excact names of each column
