@@ -10,7 +10,7 @@ To develop an interactive dashboard that visualises critical logistics metrics,
 enabling the managing director to identify trends, inefficiencies, areas for improvement, and to make better informed decisions to.......... [ consult chatgpt]
 
 Objectives:
-Visualise Shipment Performance
+Visualise KPIs
 
 
 
