@@ -1,5 +1,4 @@
-# Import pandas and matplotlib
-import pandas as pd
+# Import matplotlib
 import matplotlib.pyplot as plt
 
 # Extract mAP_0.5 values for each training session 
