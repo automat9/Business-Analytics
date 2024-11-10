@@ -16,14 +16,14 @@ colours = {"first": "blue","second": "orange","third": "green"}
     
 for column in data.columns[1:]: # Skip firt "epoch" column
     group = column.strip().split('/')[0]  # Extract groups
-    plt.plot(data["epoch"], data[column], label=column, color=colors[group], linewidth=2)
+    plt.plot(data["epoch"], data[column], label=column, color=colours[group], linewidth=2)
 
     
 # Plot config
 plt.xlabel("Epoch")
 plt.ylabel("mAP Score")
 plt.title("mAP Scores over Epochs")
-plt.grid(True, linestyle="-", alpha=1)
+plt.grid(True, alpha=1)
 plt.legend()
 
 # Show the plot
