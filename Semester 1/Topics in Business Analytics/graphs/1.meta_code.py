@@ -23,7 +23,7 @@ for column in data.columns[1:]: # Skip firt "epoch" column
 plt.xlabel("Epoch")
 plt.ylabel("mAP Score")
 plt.title("mAP Scores over Epochs")
-plt.grid(True, linestyle="-", alpha=0.9)
+plt.grid(True, linestyle="-", alpha=1)
 plt.legend()
 
 # Show the plot
