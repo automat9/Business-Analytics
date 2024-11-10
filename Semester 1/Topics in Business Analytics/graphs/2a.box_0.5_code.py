@@ -2,9 +2,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Load the descriptives
-data = pd.read_csv("https://raw.githubusercontent.com/automat9/Business-Analytics/2ac09d511a46c097df5335b2ef5968282adcb929/Semester%201/Topics%20in%20Business%20Analytics/descriptives/descriptive_statistics_mAP_0.5.csv")
-
 # Extract mAP_0.5 values for each training session 
 mAP_first = [0.445690, 0.679142, 0.687740, 0.697310, 0.708650]
 mAP_second = [0.573300, 0.639870, 0.652820, 0.669250, 0.717520]
