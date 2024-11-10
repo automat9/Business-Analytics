@@ -19,7 +19,7 @@ for column in data.columns[1:]: # Skip firt "epoch" column
     plt.plot(data["epoch"], data[column], label=column, color=colors[group], linewidth=2)
 
     
-# Labels
+# Plot config
 plt.xlabel("Epoch")
 plt.ylabel("mAP Score")
 plt.title("mAP Scores over Epochs")
