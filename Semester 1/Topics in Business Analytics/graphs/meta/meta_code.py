@@ -11,7 +11,7 @@ data.columns = data.columns.str.strip()
 ###### Graph ######
 plt.figure(figsize=(10, 6))
 
-# Define colors for each group
+# Define colours for each group
 colours = {"first": "blue","second": "orange","third": "green"}
     
 for column in data.columns[1:]: # Skip firt "epoch" column
