@@ -16,8 +16,8 @@ third_stats = data[["third/mAP_0.5", "third/mAP_0.5:0.95"]].describe()
 print("Descriptive Statistics for First Run:")
 print(first_stats)
 
-print("\nDescriptive Statistics for Second Run:")
+print("Descriptive Statistics for Second Run:")
 print(second_stats)
 
-print("\nDescriptive Statistics for Third Run:")
+print("Descriptive Statistics for Third Run:")
 print(third_stats)
