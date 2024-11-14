@@ -1,4 +1,4 @@
-# NOTICE: All ChatGPT generated!
+# NOTICE: 100% All ChatGPT generated!
 
 # Check git version to see if installed
 !git --version
