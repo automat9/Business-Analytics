@@ -10,7 +10,7 @@ third = [0.19421, 0.374265, 00.38932, 0.39776, 0.41816]
 plt.figure(figsize=(8, 6))
 plt.boxplot([first, second, third], labels=["First", "Second", "Third"])
 plt.ylabel("mAP")
-plt.grid(True, alpha=1)
+plt.grid(alpha=1)
 plt.title("Box Plot of mAP_0.5:0.95 Scores by Training Session")
 
 # Show the plot
