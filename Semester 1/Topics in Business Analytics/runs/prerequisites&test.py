@@ -1,6 +1,6 @@
 # NOTICE: All ChatGPT generated!
 
-# Check git version
+# Check git version to see if installed
 !git --version
 
 # Debugging
@@ -20,7 +20,7 @@ from yolov5 import utils
 print("YOLOv5 installation successful!")
 
 
-##### Test Run
+##### Test Run #####
 # Navigate to the yolov5 directory
 %cd yolov5
 # Train using the following syntax and config
