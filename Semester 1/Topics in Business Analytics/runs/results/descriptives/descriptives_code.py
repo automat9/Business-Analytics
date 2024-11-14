@@ -8,16 +8,16 @@ data = pd.read_csv("https://raw.githubusercontent.com/automat9/Business-Analytic
 data.columns = data.columns.str.strip()
 
 # Sort columns for each run
-first_stats = data[["first/mAP_0.5", "first/mAP_0.5:0.95"]].describe()
-second_stats = data[["second/mAP_0.5", "second/mAP_0.5:0.95"]].describe()
-third_stats = data[["third/mAP_0.5", "third/mAP_0.5:0.95"]].describe()
+first = data[["first/mAP_0.5", "first/mAP_0.5:0.95"]].describe()
+second = data[["second/mAP_0.5", "second/mAP_0.5:0.95"]].describe()
+third = data[["third/mAP_0.5", "third/mAP_0.5:0.95"]].describe()
 
 # Display the statistics
 print("Descriptive Statistics for First Run:")
-print(first_stats)
+print(first)
 
 print("Descriptive Statistics for Second Run:")
-print(second_stats)
+print(second)
 
 print("Descriptive Statistics for Third Run:")
-print(third_stats)
+print(third)
