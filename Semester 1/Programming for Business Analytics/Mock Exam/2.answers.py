@@ -5,7 +5,7 @@
 # Exam Date: N/A
 # Module: Programming for Business Analytics
 # Github link for this assignment: 
-#
+# https://github.com/automat9/Business-Analytics/blob/master/Semester%201/Programming%20for%20Business%20Analytics/Mock%20Exam/2.answers.py
 #######################################################################################################################################################
 # Instruction 1. Read each question carefully and complete the scripts as instructed.
 
