@@ -1,10 +1,10 @@
 #######################################################################################################################################################
 # 
-# Name:
-# SID:
-# Exam Date:
-# Module:
-# Github link for this assignment:  
+# Name: Matt Paw
+# SID: 730068016
+# Exam Date: N/A
+# Module: Programming for Business Analytics
+# Github link for this assignment: 
 #
 #######################################################################################################################################################
 # Instruction 1. Read each question carefully and complete the scripts as instructed.
