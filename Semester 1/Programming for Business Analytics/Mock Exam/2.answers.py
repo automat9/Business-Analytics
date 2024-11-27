@@ -25,6 +25,16 @@ weekly_sales = [120, 85, 100, 90, 110, 95, 130]
 # Write a for loop that iterates through the list and prints whether each week's sales were above or below the average sales for the period.
 # Calculate and print the average sales.
 
+average = sum(weekly_sales)/7
+print('The average is:', average)
+
+for i in weekly_sales:
+    if i>average:
+        print(i, "is above average")
+    else:
+        print(i, "is below average")
+
+
 #######################################################################################################################################################
 
 # Question 2 - String Manipulation
