@@ -1,5 +1,6 @@
 #######################################################################################################################################################
-# 
+# Total: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+# To do: 5, 6, 9
 # Name: Matt Paw
 # SID: 730068016
 # Exam Date: N/A
@@ -45,8 +46,8 @@ customer_feedback = """The product was good but could be improved. I especially 
 # Store each position in a list as a tuple (start, end) for both words and print the list.
 good = ((customer_feedback.find('good'), customer_feedback.find('good')+len('good')))
 improved = ((customer_feedback.find('improved'), customer_feedback.find('improved')+len('improved')))
-print(good)
-print(improved)
+print('The coordinates of the word good are:', good)
+print('The coordinates of the word improved are:', improved)
 #######################################################################################################################################################
 
 # Question 3 - Functions for Business Metrics
@@ -86,6 +87,8 @@ import pandas as pd
 
 sales_data = {'Month': ['Jan', 'Feb', 'Mar', 'Apr', 'May'], 'Sales': [200, 220, 210, 240, 250]}
 
+sales_df = pd.DataFrame(sales_data)
+
 sales_df['Cummulative'] = sales_df['Sales'].cumsum()
 print(sales_df)
 #######################################################################################################################################################
@@ -116,6 +119,14 @@ prices = {'A': 50, 'B': 75, 'C': 'unknown', 'D': 30}
 import matplotlib.pyplot as plt
 import random
 
+sample = random.sample(range(1,501),50)
+plt.xlabel('Numbers')
+plt.ylabel('Frequency')
+plt.title('Histogram showing the frequency of 50 random numbers between 1 and 500') 
+
+plt.hist(sample)
+plt.show()
+
 #######################################################################################################################################################
 
 # Question 8 - List Comprehensions
@@ -123,8 +134,10 @@ import random
 quantities = [5, 12, 9, 15, 7, 10]
 
 # Use a list comprehension to create a new list that doubles each quantity that is 10 or more.
+new_quantities = [i * 2 for i in quantities if i>=10]
 # Print the original and the new lists.
-
+print('Old Quantities for Q8:', quantities)
+print('New Quantities for Q8:', new_quantities)
 #######################################################################################################################################################
 
 # Question 9 - Dictionary Manipulation
@@ -139,8 +152,9 @@ values = [10, 20, 30, 40, 50]
 total = 0
 for i in values:
     total = total + i
+
 average = total / len(values)
-print("The average is", average) # remove the + between the string and the float and replace with a comma
+print("Fixed Q9: The average is", average) # remove the + between the string and the float and replace with a comma
 
 # Identify and correct the errors in the code.
 # Comment on each error and explain your fixes.
