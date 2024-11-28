@@ -43,7 +43,10 @@ customer_feedback = """The product was good but could be improved. I especially 
 
 # Find the first and last occurrence of the words 'good' and 'improved' in the feedback using string methods.
 # Store each position in a list as a tuple (start, end) for both words and print the list.
-
+good = ((customer_feedback.find('good'), customer_feedback.find('good')+len('good')))
+improved = ((customer_feedback.find('improved'), customer_feedback.find('improved')+len('improved')))
+print(good)
+print(improved)
 #######################################################################################################################################################
 
 # Question 3 - Functions for Business Metrics
@@ -54,6 +57,26 @@ customer_feedback = """The product was good but could be improved. I especially 
 # 3. Net Promoter Score (NPS): Calculate as (Promoters - Detractors) / Total Respondents * 100.
 # 4. Return on Investment (ROI): Calculate as (Net Gain from Investment / Investment Cost) * 100.
 
+#1.
+def net_profit_margin(net_profit,revenue):
+    return (net_profit / revenue)*100
+    
+print('Net Profit Margin is:', net_profit_margin(68016,730068016))
+
+#2.
+def CAC(total_marketing_cost, new_customers):
+    return (total_marketing_cost/new_customers)
+print('Customer Acquisition Cost is:', CAC(730068016, 68016))
+
+#3.
+def NPS(promoters, detractors, total_respondents):
+    return (promoters - detractors) / total_respondents * 100
+print('Net Promoter Score is:', NPS(730, 16, 68016))
+
+#4.
+def ROI(net_gain,investment_cost):
+    return (net_gain / investment_cost) * 100
+print('Return on Investment is:', ROI(68016, 7300))
 #######################################################################################################################################################
 
 # Question 4 - Data Analysis with Pandas
@@ -63,6 +86,9 @@ import pandas as pd
 
 sales_data = {'Month': ['Jan', 'Feb', 'Mar', 'Apr', 'May'], 'Sales': [200, 220, 210, 240, 250]}
 
+sales_df = pd.DataFrame(sales_data)
+
+sales_df
 #######################################################################################################################################################
 
 # Question 5 - Linear Regression for Forecasting
@@ -115,7 +141,7 @@ total = 0
 for i in values:
     total = total + i
 average = total / len(values)
-print("The average is" + average)
+print("The average is", average) # remove the + between the string and the float and replace with a comma
 
 # Identify and correct the errors in the code.
 # Comment on each error and explain your fixes.
