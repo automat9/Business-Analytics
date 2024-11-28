@@ -144,6 +144,9 @@ print('New Quantities for Q8:', new_quantities)
 # Using the dictionary below, filter out the products with a rating of less than 4 and create a new dictionary with the remaining products.
 ratings = {'product_A': 4, 'product_B': 5, 'product_C': 3, 'product_D': 2, 'product_E': 5}
 
+filtered_ratings = {key: value for key, value in ratings.items() if value >= 4}
+
+print('The filtered ratings from Q9:', filtered_ratings)
 #######################################################################################################################################################
 
 # Question 10 - Debugging and Correcting Code
