@@ -55,7 +55,6 @@ predicted_demand = result.predict([1,26])
 print('The predicted demand at price £26 is:', predicted_demand[0])
 #######################################################################################################################################################
 # Error Handling
-# Error Handling
 prices = {'A': 50, 'B': 75, 'C': 'unknown', 'D': 30}
 def total_price(prices):
     total = 0
