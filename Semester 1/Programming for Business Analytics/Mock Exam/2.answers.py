@@ -55,17 +55,18 @@ predicted_demand = result.predict([1,26])
 print('The predicted demand at price £26 is:', predicted_demand[0])
 #######################################################################################################################################################
 # Error Handling
+# Error Handling
 prices = {'A': 50, 'B': 75, 'C': 'unknown', 'D': 30}
 def total_price(prices):
     total = 0
     for product, price in prices.items():
-        if not isinstance(price, int):
+        if type(price) != int:
             print('Skipping non-numeric or invalid value for item:', product, price)
             continue
         total += price
 
     return total
-print(total_price(prices))
+print(' The total price of acceptable products is:','$',total_price(prices))
 #######################################################################################################################################################
 # Question 7 - Plotting and Visualization
 import matplotlib.pyplot as plt
