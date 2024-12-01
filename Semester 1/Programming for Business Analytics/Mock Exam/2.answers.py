@@ -57,14 +57,13 @@ print('The predicted demand at price £26 is:', predicted_demand[0])
 # Error Handling
 prices = {'A': 50, 'B': 75, 'C': 'unknown', 'D': 30}
 def total_price(prices):
-    total = 0 
+    total = 0
     for product, price in prices.items():
-        try:
-            total += price
-        except ValueError:
-            print('Skipping non-numeric value for item:', product, price)
-        except TypeError:
-            print('Skipping invalid type for item:', product, price)
+        if not isinstance(price, int):
+            print('Skipping non-numeric or invalid value for item:', product, price)
+            continue
+        total += price
+
     return total
 print(total_price(prices))
 #######################################################################################################################################################
