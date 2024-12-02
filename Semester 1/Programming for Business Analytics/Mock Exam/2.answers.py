@@ -67,7 +67,7 @@ def total_price(prices):
     return total
 print(' The total price of acceptable products is:','$',total_price(prices))
 #######################################################################################################################################################
-# Question 7 - Plotting and Visualization
+# Plotting and Visualization
 import matplotlib.pyplot as plt
 import random
 sample = random.sample(range(1,501),50)
