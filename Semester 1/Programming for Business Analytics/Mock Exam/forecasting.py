@@ -8,7 +8,7 @@ model = sma.OLS(sales, sma.add_constant(budget)) # ordinary least squares, first
 result = model.fit()
 #print(result.summary())
 
-plt.scatter(budget, sales, label='Actual values') # budget on x axis because independent, dependend on y
+plt.scatter(budget, sales, label='Actual values') # x axis independent, dependend (sales) second argument
 plt.plot(budget, result.predict(), color='r', label='Predicted') # predictions for given budget values
 plt.xlabel('budget')
 plt.ylabel('sales')
