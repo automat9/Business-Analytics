@@ -34,3 +34,20 @@ x = 10
 while x >= 1:
     print(x)
     x = x/2
+
+# sum of multiples of 3 between 1 and 50
+total = 0
+for i in range(1,51):
+    if i % 3 == 0:
+        total +=i
+print(total)
+
+# vertical output
+words = ["hello", "world", "python", "rocks"]
+for word in words:
+    print(word[::-1])
+    
+# [... ... ...] output
+words = ["hello", "world", "python", "rocks"]
+reversed = [word[::-1] for word in words]
+print(reversed)
