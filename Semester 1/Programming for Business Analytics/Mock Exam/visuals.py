@@ -20,3 +20,12 @@ plt.xlabel('Visitors')
 plt.title('Number of visitors per day')
 plt.grid()
 plt.show()
+
+# Line Plot: plt.plot()
+# Bar Chart: plt.bar()
+# Horizontal Bar Chart: plt.barh()
+# Scatter Plot: plt.scatter()
+# Histogram: plt.hist()
+# Pie Chart: plt.pie()
+# Box Plot: plt.boxplot()
+
