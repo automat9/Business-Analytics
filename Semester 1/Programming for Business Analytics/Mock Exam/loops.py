@@ -51,3 +51,22 @@ for word in words:
 words = ["hello", "world", "python", "rocks"]
 reversed = [word[::-1] for word in words]
 print(reversed)
+
+
+# print total in range 10
+total = 0
+for i in range(1,11):
+    total += i
+print(total)
+
+# multiple of 5
+i = 1
+while i <= 50:
+    if i % 5 == 0:
+        print(i)
+    i += 1
+#or 
+for i in range(1,51):
+    if i % 5 ==0:
+        i
+print(i)
