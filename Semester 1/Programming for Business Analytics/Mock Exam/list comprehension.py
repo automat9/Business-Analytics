@@ -17,3 +17,11 @@ print(length)
 numbers = [5,10,15,20,25]
 multiplied = [num * index for index, num in enumerate(numbers)]
 print(multiplied) # multiplied elements by their respective indices
+
+# printing every second element
+# range(start,end,step)
+numbers = [10, 20, 30, 40, 50, 60, 70]
+every_second = []
+for num in range(0, len(numbers), 2):
+    every_second.append(numbers[num])
+print(every_second)
