@@ -1,4 +1,4 @@
-# mean
+# mean 
 import pandas as pd
 data = {
     'Name': ['Alice','Bob','Carol'],
