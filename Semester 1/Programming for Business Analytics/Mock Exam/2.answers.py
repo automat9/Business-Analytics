@@ -29,9 +29,9 @@ print('The value of x:', x(4, 5, 2))
 # Data Analysis with Pandas
 import pandas as pd
 sales_data = {'Month': ['Jan', 'Feb', 'Mar', 'Apr', 'May'], 'Sales': [200, 220, 210, 240, 250]}
-sales_df = pd.DataFrame(sales_data)
-sales_df['Cummulative'] = sales_df['Sales'].cumsum()
-print(sales_df)
+df = pd.DataFrame(sales_data)
+df['Cummulative'] = df['Sales'].cumsum()
+print(df)
 #######################################################################################################################################################
 # Forecasting - linear regression model
 price = [15, 18, 20, 22, 25, 27, 30]
