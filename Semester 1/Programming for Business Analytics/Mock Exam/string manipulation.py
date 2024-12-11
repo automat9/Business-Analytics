@@ -26,3 +26,8 @@ start_index = string.find(word)
 end_index = start_index + len(word)
 result = string[start_index:end_index]
 print('The coordinates of your word are:', start_index, end_index)
+
+# How many words (split transforms each word into an individual value in a list)
+sentence = "The quick brown fox jumps over the lazy dog."
+individual = sentence.split()
+len(individual)
