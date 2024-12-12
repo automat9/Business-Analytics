@@ -1,3 +1,6 @@
+# Dataset 
+plt.scatter(df["X_Random"], df["Y_Random"])
+
 # 1
 import matplotlib.pyplot as plt
 
