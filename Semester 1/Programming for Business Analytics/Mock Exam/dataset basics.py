@@ -3,6 +3,9 @@ df = pd.read_csv("C:\\Users\\mp967\\Desktop\\Coffee_company.csv")
 # or
 df = pd.read_csv(r"C:\Users\mp967\Desktop\Coffee_company.csv")
 
+df = pd.read_csv(r"C:\Users\mati9\Desktop\data.csv")
+df = pd.read_excel(r"C:\Users\mati9\Desktop\data.xlsx")
+
 # remove white space from columns
 df.columns = df.columns.str.strip()
 
