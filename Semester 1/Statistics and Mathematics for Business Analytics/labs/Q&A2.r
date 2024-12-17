@@ -61,5 +61,38 @@ the chances of finding exactly 12 or at most 10 is significantly lowered because
 
 #A coffee shop receives an average of 5 customers every hour.
 #a) What is the probability that the coffee shop receives exactly 4 customers in a given hour?
+Using the Poisson distribution formula, we have:
+• Average number of customers per hour (λ) = 5
+• Number of customers (k) = 4
+The formula is:
+P(X = k) = (e^(-λ) * λ^k) / k!
+Calculating this:
+P(X = 4) = (e^(-5) * 5^4) / 4!
+= (0.0067 * 625) / 24
+≈ 0.1755 (or about 17.55%).
+
+
 #b) What is the probability that the coffee shop receives no more than 3 customers in a given hour?
+
+To find the probability of receiving no more than 3 customers, we sum the probabilities of
+receiving 0, 1, 2, and 3 customers.
+P(X ≤ 3) = P(X = 0) + P(X = 1) + P(X = 2) + P(X = 3)
+Calculating each:
+• P(X = 0) = (e^(-5) * 5^0) / 0!
+= e^(-5) ≈ 0.0067
+• P(X = 1) = (e^(-5) * 5^1) / 1!
+= (0.0067 * 5) ≈ 0.0335
+• P(X = 2) = (e^(-5) * 5^2) / 2!
+= (0.0067 * 25) / 2 ≈ 0.0838
+• P(X = 3) = (e^(-5) * 5^3) / 3!
+= (0.0067 * 125) / 6 ≈ 0.1399
+Summing these probabilities:
+P(X ≤ 3) ≈ 0.0067 + 0.0335 + 0.0838 + 0.1399 ≈ 0.2639 (or about 26.39%).
 #c) If the average number of customers increases to 8 per hour, how would this affect the probability of receiving exactly 4 customers? Briefly explain how this change could impact the coffee shop's staffing decisions. 
+If the average number of customers increases to 8, the new λ would be 8.
+Calculating the probability of receiving exactly 4 customers with λ = 8:
+P(X = 4) = (e^(-8) * 8^4) / 4!
+Calculating this gives approximately:
+P(X = 4) ≈ 0.0183 (or about 1.83%).
+With an increase in the average number of customers, the probability of receiving exactly 4
+customers decreases.
