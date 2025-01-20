@@ -4,6 +4,12 @@
 # always care about out-of-sample performance (scikit), out of sample testing > in sample performance
 # r^2 proportion of variance that our model is explaining
 # but adjusted still better because than normal r^2, which makes overfitting look good
+# bootstrap: take data, create a few smaller samples with replacement
+# random forest model does not like missing data, we can drop missing values, change missing to mean, bad idea but for larger datasets won't make much difference
+# precision allows for false positives
+# recall allows for false negatives (check 0.3 random_forest
+# cross validation very costly on large datasets, but do if you can to ensure our model gives us what is should 
+
 
 
 
