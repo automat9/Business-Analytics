@@ -8,9 +8,9 @@
 # random forest model does not like missing data, we can drop missing values, change missing to mean, bad idea but for larger datasets won't make much difference
 # precision allows for false positives
 # recall allows for false negatives (check 0.3 random_forest
+# precision = if I make a positive prediction, how often do I get it right
+# recall = how often is the result of interest brought back
 # cross validation very costly on large datasets, but do if you can to ensure our model gives us what is should 
-
-
 
 
 # good way of knowing models: test by generating random sample data
@@ -26,3 +26,13 @@ fit = model.fit(X, y)
 # mean when value of x is 0
 intercept = 3.885506032525154
 
+
+
+# Hyperparameter Optimisation
+# Why: To get a better fitting model, every model has hyperparameters
+# How: optimise important ones, keep others at default to save time
+# Trick; to determine which ones are important
+
+# GridSearchCV = Cross Validation
+scoring='f1' # 
+n_jobs=4 # 4 cores on a computer, perform 4 jobs at the same time
