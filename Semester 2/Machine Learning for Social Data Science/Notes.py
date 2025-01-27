@@ -34,5 +34,13 @@ intercept = 3.885506032525154
 # Trick; to determine which ones are important
 
 # GridSearchCV = Cross Validation
-scoring='f1' # 
+scoring='f1' # average
 n_jobs=4 # 4 cores on a computer, perform 4 jobs at the same time
+
+# Extreme boosted trees (XGBoost)
+# Boosting model with lower bias, more more models to try to learn what the previous model missed
+# Bagging best fitting model, more likely to overfit, out of sample performance critical
+
+
+# Most important parameter, learning rate
+learning_rate': hp.loguniform('learning_rate', -5, -2)
