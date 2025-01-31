@@ -2,14 +2,14 @@
 -- Relationships as per ERD: Borrowers can borrow loans / Books can be borrowed by loans
 CREATE SCHEMA T3;
 
-CREATE TABLE Borrowers (
+CREATE TABLE T3.Borrowers (
     borrower_id INT PRIMARY KEY IDENTITY(1,1),
     name NVARCHAR(100) NOT NULL,
     address NVARCHAR(255),
     phone_number NVARCHAR(20)
 );
 
-CREATE TABLE Books (
+CREATE TABLE T3.Books (
     book_id INT PRIMARY KEY IDENTITY(1,1),
     title NVARCHAR(255) NOT NULL,
     author NVARCHAR(255) NOT NULL,
