@@ -45,3 +45,38 @@ VALUES
 (3, 3, '2024-11-07', '2025-01-20'), -- Michael Brown borrows "To Kill a Mockingbird"
 (4, 4, '2024-12-06', '2025-01-12'), -- Sarah Jones borrows "Moby Dick"
 (5, 1, '2024-11-02', '2025-01-04'); -- John Smith borrows "The Great Gatsby" 
+
+-- Tasks
+ -- 1.Retrive the borrower information for a specific book
+SELECT DISTINCT b.name, b.phone_number
+FROM T3.Borrowers b -- Alias 'b' for Borrowers
+JOIN T3.Loans l ON b.borrower_id  = l.borrower_id -- Alias 'l' for Loans
+JOIN T3.Books bk ON l.book_id = bk.book_id -- Alias 'bk' for Books
+WHERE bk.title = 'To Kill a Mockingbird'; -- Referencing 'bk' (Books)
+
+-- 2.Find the most recently borrowed books
+SELECT TOP 3 bk.title
+FROM T3.Loans l
+JOIN T3.Books bk ON l.book_id = bk.book_id
+ORDER BY l.borrow_date DESC;
+-- Note: SQL Server does not support 'LIMIT', unlike MySQL and other databases, SQL Server instead uses TOP
+
+-- 3.Count the number of unique books borrowed
+SELECT COUNT(DISTINCT book_id) AS total_unique_books_borrowed -- custom column name for the output
+FROM T3.Loans;
+
+-- 4.List borrowers who borrowed multiple books
+SELECT b.name, COUNT(l.book_id) AS books_borrowed
+FROM T3.Borrowers b
+JOIN T3.Loans l ON b.borrower_id = l.borrower_id
+GROUP BY b.name, b.borrower_id
+HAVING COUNT(l.book_id) > 1;
+
+-- 5.Filter loans based on date range
+SELECT DISTINCT bk.title
+FROM T3.Loans l
+JOIN T3.Books bk ON l.book_id = bk.book_id
+WHERE l.borrow_date BETWEEN '2024-11-01' AND '2024-12-31';
+
+
+
