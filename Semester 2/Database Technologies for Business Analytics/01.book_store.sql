@@ -1,5 +1,7 @@
 -- Create a database for a library, three tables, two foreign keys
 -- Relationships as per ERD: Borrowers can borrow loans / Books can be borrowed by loans
+CREATE SCHEMA T3;
+
 CREATE TABLE Borrowers (
     borrower_id INT PRIMARY KEY IDENTITY(1,1),
     name NVARCHAR(100) NOT NULL,
