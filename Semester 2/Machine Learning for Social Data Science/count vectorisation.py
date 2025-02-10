@@ -15,3 +15,10 @@ print(X.toarray())
 [[0 1 0 0 0 0 1 1 1 2 0]
  [0 1 1 1 0 0 0 0 0 2 0]
  [1 0 1 2 1 1 0 0 0 1 1]]
+
+
+# Create a CountVectorizer with English stopwords (Words that appear very often in a specific language, like 'the' 'a' 'with')
+vectorizer = CountVectorizer(stop_words='english')
+X = vectorizer.fit_transform(corpus)
+print(vectorizer.get_feature_names_out())
+print(X.toarray())
