@@ -1,9 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[24]:
-
-
+################################################## Linear Regression ##################################################
 # Import relevant libraries
 import pandas as pd
 import numpy as np
@@ -15,7 +10,7 @@ import statsmodels.api as sm
 # Load and preprocess the dataset
 df = pd.read_excel("https://github.com/automat9/Business-Analytics/raw/master/Semester%202/Machine%20Learning%20for%20Social%20Data%20Science/Assignments/car%20prices%20final.xlsx")
 cat_cols = ['model', 'trim', 'body', 'transmission', 'color', 'interior'] # non numerical columns
-df = pd.get_dummies(df, columns=cat_cols, drop_first=True) # encoding non numerical data 
+df = pd.get_dummies(df, columns=cat_cols, drop_first=True) # encoding non-numerical data 
 
 # Define features and target
 X = df.drop('sellingprice', axis=1) # dependent (feature) variables (every column except sellingprice)
@@ -33,7 +28,7 @@ r2 = r2_score(y_test, y_pred)  # Save R² score into a variable
 print("Mean Squared Error:", mse)
 print("R^2 Score:", r2)
 
-# Compute Adjusted R^2 for the test set
+# Compute Adjusted R² for the test set
 n = X_test.shape[0]  # Number of observations in test set
 p = X_test.shape[1]  # Number of predictors
 adjusted_r2 = 1 - (1 - r2) * (n - 1) / (n - p - 1)
@@ -88,7 +83,7 @@ plt.axhline(0, color='red', linestyle='--', lw=2)
 plt.show()
 
 ################################################# Visualisation 3
-# Choose a feature to examine, e.g., 'odometer'
+# Choose a feature to examine
 odometer_range = np.linspace(X_test['odometer'].min(), X_test['odometer'].max(), 100)
 # Create a DataFrame based on the average of each feature in the test set
 avg_features = X_test.mean().to_frame().T
@@ -108,9 +103,7 @@ plt.title("Partial Dependence of Selling Price on Odometer")
 plt.show()
 
 
-# In[25]:
-
-
+################################################## Random Forest ##################################################
 # Import relevant libraries
 import pandas as pd
 import numpy as np
@@ -136,7 +129,7 @@ y = df['sellingprice']              # Target variable
 # Split data into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize and train the Random Forest Regressor
+# Initialise and train the Random Forest Regressor
 rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
@@ -147,7 +140,7 @@ r2 = r2_score(y_test, y_pred)  # Save R² score into a variable
 print("Mean Squared Error:", mse)
 print("R^2 Score:", r2)
 
-# Compute Adjusted R^2
+# Compute Adjusted R²
 n = X_test.shape[0]  # Number of observations
 p = X_test.shape[1]  # Number of predictors
 adjusted_r2 = 1 - (1 - r2) * (n - 1) / (n - p - 1)
@@ -175,9 +168,10 @@ new_car_encoded = new_car_encoded.reindex(columns=X_train.columns, fill_value=0)
 predicted_price = rf_model.predict(new_car_encoded)[0]
 print("Predicted Selling Price for new car:", predicted_price)
 
-# Visualize one of the trees from the Random Forest
+################################################# Visualisation 1
+# Visualise one of the trees from the Random Forest
 plt.figure(figsize=(20, 10))
-# Pick the first tree in the forest for visualization
+# Pick the first tree in the forest for visualisation
 tree = rf_model.estimators_[0]
 plot_tree(tree,
           feature_names=X_train.columns,
@@ -188,7 +182,7 @@ plot_tree(tree,
 plt.title("Visualization of one tree from the Random Forest")
 plt.show()
 
-
+################################################# Visualisation 2
 # Zip the features with their importance values and sort them in descending order
 sorted_features_importances = sorted(zip(X_train.columns, rf_model.feature_importances_), 
                                      key=lambda x: x[1], reverse=True)
