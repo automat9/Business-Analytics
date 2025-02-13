@@ -19,7 +19,7 @@ y = df['sellingprice'] # independent (target) variable
 # Split into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-# Train the scikit-learn Linear Regression model
+# Fit the model
 lr_model = LinearRegression().fit(X_train, y_train)
 
 # Predict on the test set
