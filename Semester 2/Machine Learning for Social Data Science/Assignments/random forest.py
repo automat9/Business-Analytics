@@ -21,7 +21,7 @@ X = df.drop('sellingprice', axis=1)  # All columns except the target
 y = df['sellingprice']              # Target variable
 
 # Split data into training and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
 # Initialise and train the Random Forest Regressor
 rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
