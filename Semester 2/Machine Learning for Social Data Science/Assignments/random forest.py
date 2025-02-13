@@ -63,7 +63,7 @@ predicted_price = rf_model.predict(new_car_encoded)[0]
 print("Predicted Selling Price for new car:", predicted_price)
 
 
-
+################################################# Visualisation 1
 # Visualise one of the trees from the Random Forest
 plt.figure(figsize=(20, 10))
 # Pick the first tree in the forest for visualization
@@ -77,7 +77,7 @@ plot_tree(tree,
 plt.title("Visualization of one tree from the Random Forest")
 plt.show()
 
-
+################################################# Visualisation 2
 # Zip the features with their importance values and sort them in descending order
 sorted_features_importances = sorted(zip(X_train.columns, rf_model.feature_importances_), 
                                      key=lambda x: x[1], reverse=True)
