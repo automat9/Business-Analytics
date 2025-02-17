@@ -13,7 +13,7 @@ df = pd.read_excel("https://github.com/automat9/Business-Analytics/raw/master/Se
 # Define categorical columns that require encoding
 cat_cols = ['model', 'trim', 'body', 'transmission', 'color', 'interior']
 
-# Encode non numerical data using get_dummies and drop the first level for each category
+# Encode non-numerical data using get_dummies and drop the first level for each category
 df = pd.get_dummies(df, columns=cat_cols, drop_first=True)
 
 # Define features and target variable
@@ -23,7 +23,7 @@ y = df['sellingprice']              # Target variable
 # Split data into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-# Initialise and train the Random Forest Regressor
+# Initialize and train the Random Forest Regressor
 rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
@@ -42,15 +42,15 @@ print("Adjusted R^2 Score:", adjusted_r2)
 
 # Define new car data for prediction
 new_car_data = {
-    'year': [2000],
-    'model': ['Explorer'],       
-    'trim': ['XLS'],           
-    'body': ['SUV'],          
+    'year': [2002],
+    'model': ['Ranger'],       
+    'trim': ['XLT'],           
+    'body': ['regular cab'],          
     'transmission': ['automatic'],
-    'condition': [40],
-    'odometer': [120000],
-    'color': ['red'],           
-    'interior': ['black']}
+    'condition': [28],
+    'odometer': [157687],
+    'color': ['white'],           
+    'interior': ['brown']}
 
 new_car_df = pd.DataFrame(new_car_data)
 
@@ -62,14 +62,12 @@ new_car_encoded = new_car_encoded.reindex(columns=X_train.columns, fill_value=0)
 predicted_price = rf_model.predict(new_car_encoded)[0]
 print("Predicted Selling Price for new car:", predicted_price)
 
-
-################################################# Visualisation 1
-# Visualise one of the trees from the Random Forest
+# Visualize one of the trees from the Random Forest
 plt.figure(figsize=(20, 10))
 # Pick the first tree in the forest for visualization
 tree = rf_model.estimators_[0]
 plot_tree(tree,
-          feature_names=X_train.columns,
+          feature_names=list(X_train.columns),
           filled=True,
           rounded=True,
           max_depth=3,   # Limiting the depth for clarity
@@ -77,7 +75,7 @@ plot_tree(tree,
 plt.title("Visualization of one tree from the Random Forest")
 plt.show()
 
-################################################# Visualisation 2
+
 # Zip the features with their importance values and sort them in descending order
 sorted_features_importances = sorted(zip(X_train.columns, rf_model.feature_importances_), 
                                      key=lambda x: x[1], reverse=True)
