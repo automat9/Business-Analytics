@@ -9,21 +9,22 @@ import statsmodels.api as sm
 
 # Load and preprocess the dataset
 df = pd.read_excel("https://github.com/automat9/Business-Analytics/raw/master/Semester%202/Machine%20Learning%20for%20Social%20Data%20Science/Assignments/car%20prices%20final.xlsx")
-cat_cols = ['model', 'trim', 'body', 'transmission', 'color', 'interior'] # listing non numerical columns
-df = pd.get_dummies(df, columns=cat_cols, drop_first=True) # encoding non numerical data (critical for regression analysis)
+cat_cols = ['model', 'trim', 'body', 'transmission', 'color', 'interior'] # non numerical columns
+df = pd.get_dummies(df, columns=cat_cols, drop_first=True) # encoding non numerical data 
 
-# Define features and target variable
+# Define features and target
 X = df.drop('sellingprice', axis=1) # dependent (feature) variables (every column except sellingprice)
 y = df['sellingprice'] # independent (target) variable
 
 # Split into training and test sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-# Fit the model
+# Train the scikit-learn Linear Regression model
 lr_model = LinearRegression().fit(X_train, y_train)
 
 # Predict on the test set
 y_pred = lr_model.predict(X_test)
+
 
 # Calculate and print metrics
 mse = mean_squared_error(y_test, y_pred)
@@ -39,27 +40,21 @@ print("Adjusted R^2 Score:", adjusted_r2)
 
 # Define and preprocess new car data for prediction
 new_car_data = {
-    'year': [2000],
-    'model': ['Explorer'],       
-    'trim': ['XLS'],           
-    'body': ['SUV'],          
+    'year': [2002],
+    'model': ['Ranger'],       
+    'trim': ['XLT'],           
+    'body': ['regular cab'],          
     'transmission': ['automatic'],
-    'condition': [40],
-    'odometer': [120000],
-    'color': ['red'],           
-    'interior': ['black']}
+    'condition': [28],
+    'odometer': [157687],
+    'color': ['white'],           
+    'interior': ['brown']}
 
-# Create a DataFrame from the new car data dictionary
 new_car_df = pd.DataFrame(new_car_data)
-
-# One-hot encode the categorical variables in the new car DataFrame,
-# then reindex the resulting DataFrame to match the columns used in training (filling missing columns with 0),
-# and finally convert all values to float type
 new_car_encoded = (pd.get_dummies(new_car_df, columns=cat_cols, drop_first=True)
                      .reindex(columns=X_train.columns, fill_value=0)
                      .astype(float))
 
-# Use the trained linear regression model to predict the selling price for the new car
 predicted_price = lr_model.predict(new_car_encoded)[0]
 print("Predicted Selling Price:", predicted_price)
 
@@ -90,7 +85,7 @@ plt.axhline(0, color='red', linestyle='--', lw=2)
 plt.show()
 
 ################################################# Visualisation 3
-# Choose a feature to examine, in this case 'odometer'
+# Choose a feature to examine, e.g., 'odometer'
 odometer_range = np.linspace(X_test['odometer'].min(), X_test['odometer'].max(), 100)
 # Create a DataFrame based on the average of each feature in the test set
 avg_features = X_test.mean().to_frame().T
