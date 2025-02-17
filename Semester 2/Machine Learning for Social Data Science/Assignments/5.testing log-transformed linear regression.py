@@ -38,9 +38,16 @@ y_pred_log_exp = np.exp(y_pred_log)
 # Evaluate the model
 mse_log = mean_squared_error(y_test, y_pred_log_exp)
 r2_log = r2_score(y_test, y_pred_log_exp)
+
+# Compute Adjusted R^2
+n = X_test.shape[0]  # Number of observations in the test set
+k = X_test.shape[1]  # Number of predictors
+adj_r2_log = 1 - (1 - r2_log) * (n - 1) / (n - k - 1)
+
 print("Linear Regression with Log-Transformed Target:")
 print("  Mean Squared Error:", mse_log)
 print("  R^2:", r2_log)
+print("  Adjusted R^2:", adj_r2_log)
 
 # -------------------------------
 # 3. Predicting another Existing Data Point
