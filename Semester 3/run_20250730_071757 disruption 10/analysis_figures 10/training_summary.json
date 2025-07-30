@@ -1,0 +1,38 @@
+{
+  "ewa_pd70_pf10": {
+    "agent_name": "EWA-DQN (Low Accuracy)",
+    "total_episodes": 6400,
+    "initial_cost": 8804.04,
+    "final_cost": 244.91,
+    "best_cost": 234.89,
+    "improvement": 8559.130000000001,
+    "volatility": 2.4953008753362877
+  },
+  "ewa_pd80_pf5": {
+    "agent_name": "EWA-DQN (Medium Accuracy)",
+    "total_episodes": 6000,
+    "initial_cost": 13809.86,
+    "final_cost": 371.97,
+    "best_cost": 238.44,
+    "improvement": 13437.890000000001,
+    "volatility": 2.8799989592309716
+  },
+  "ewa_pd90_pf1": {
+    "agent_name": "EWA-DQN (High Accuracy)",
+    "total_episodes": 7700,
+    "initial_cost": 18353.34,
+    "final_cost": 225.63,
+    "best_cost": 222.01,
+    "improvement": 18127.71,
+    "volatility": 3.215031507244679
+  },
+  "srdqn": {
+    "agent_name": "Standard DQN",
+    "total_episodes": 6900,
+    "initial_cost": 10519.3,
+    "final_cost": 263.28,
+    "best_cost": 236.51,
+    "improvement": 10256.019999999999,
+    "volatility": 2.8751463597930824
+  }
+}
