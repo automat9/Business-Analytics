@@ -1,0 +1,36 @@
+PERFORMANCE SUMMARY WITH 95% CONFIDENCE INTERVALS
+============================================================
+1. EWA-DQN (Low Acc.)
+------------------------------
+Total Cost: 235 (95% CI: 227 - 242)
+Bullwhip Ratio: 1.90 (95% CI: 1.82 - 1.97)
+Ripple Effect: 0.99 (95% CI: 0.99 - 0.99)
+
+2. EWA-DQN (Med. Acc.)
+------------------------------
+Total Cost: 240 (95% CI: 232 - 249)
+Bullwhip Ratio: 0.83 (95% CI: 0.75 - 0.90)
+Ripple Effect: 1.01 (95% CI: 1.00 - 1.02)
+
+3. EWA-DQN (High Acc.)
+------------------------------
+Total Cost: 244 (95% CI: 238 - 250)
+Bullwhip Ratio: 2.57 (95% CI: 2.47 - 2.67)
+Ripple Effect: 0.99 (95% CI: 0.98 - 0.99)
+
+4. Standard DQN
+------------------------------
+Total Cost: 286 (95% CI: 279 - 293)
+Bullwhip Ratio: 1.09 (95% CI: 1.06 - 1.13)
+Ripple Effect: 1.00 (95% CI: 0.99 - 1.00)
+
+5. Sterman Heuristic
+------------------------------
+Total Cost: 426 (95% CI: 407 - 444)
+Bullwhip Ratio: 3.29 (95% CI: 3.07 - 3.52)
+Ripple Effect: 0.98 (95% CI: 0.97 - 0.98)
+
+NOTES:
+- 95% confidence intervals based on multiple test evaluations
+- Lower values are better for Cost and Bullwhip Ratio
+- Ripple Effect close to 1.0 indicates good supply chain stability
