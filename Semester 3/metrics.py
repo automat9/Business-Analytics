@@ -36,9 +36,21 @@ def ripple_ratio(orders, shipments, ddof=1):
     return v_s / v_o
 
 def bullwhip_ripple_index(orders, demand, shipments, **kwargs):
+    """
+    BRI calculation: RE / (RE + BW)
+    This measures the proportion of the ripple effect relative to the combined effect.
+    """
     bw = bullwhip_ratio(orders, demand, **kwargs)
     re = ripple_ratio(orders, shipments, **kwargs)
-    return bw * re if (np.isfinite(bw) and np.isfinite(re)) else np.nan
+    
+    if not (np.isfinite(bw) and np.isfinite(re)):
+        return np.nan
+    
+    # Handle edge case where both are zero
+    if bw + re == 0:
+        return np.nan
+    
+    return re / (re + bw)
 
 def total_costs(inventory_levels, backorders, holding_cost, backorder_cost):
     inv = np.asarray(inventory_levels, dtype=float)
@@ -61,6 +73,7 @@ def evaluate_run(history, holding_cost, backorder_cost):
         'BRI':  bullwhip_ripple_index(orders, demand, shipments),
         'Cost': total_costs(inventory, backorders, holding_cost, backorder_cost)
     }
+
 def evaluate_phases(history, disruption_info, holding_cost, backorder_cost):
     """
     Calculate KPIs for pre/during/post disruption phases (for RQ2).
