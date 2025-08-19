@@ -1,5 +1,0 @@
-agent_type,agent_name,total_episodes,initial_cost,final_cost,best_cost,cost_improvement,convergence_episode,training_volatility
-ewa_pd70_pf10,EWA-DQN (Low Accuracy),6400,8804.04,244.91,234.89,8559.130000000001,3300,2.4953008753362877
-ewa_pd80_pf5,EWA-DQN (Medium Accuracy),6000,13809.86,371.97,238.44,13437.890000000001,3100,2.8799989592309716
-ewa_pd90_pf1,EWA-DQN (High Accuracy),7700,18353.34,225.63,222.01,18127.71,3900,3.215031507244679
-srdqn,Standard DQN,6900,10519.3,263.28,236.51,10256.019999999999,3500,2.8751463597930824

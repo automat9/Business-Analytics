@@ -1,4 +1,0 @@
-model_checkpoint_path: "best-model"
-all_model_checkpoint_paths: "network--589999"
-all_model_checkpoint_paths: "network--594999"
-all_model_checkpoint_paths: "best-model"
